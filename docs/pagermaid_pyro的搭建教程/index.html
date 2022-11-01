@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/i.oneblog.eu.org\/pagermaid_pyro%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B\/"
-        },"genre": "posts","keywords": "PagerMaid","wordcount":  388 ,
+        },"genre": "posts","keywords": "PagerMaid","wordcount":  393 ,
         "url": "https:\/\/i.oneblog.eu.org\/pagermaid_pyro%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B\/","datePublished": "2022-11-01T12:16:29+08:00","dateModified": "2022-11-01T12:16:29+08:00","license": "Copyright © 2022, Altria, all rights reserved.","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PagerMaid_Pyro的搭建教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Altria Saber</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/telegram/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Telegram</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-01">2022-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 388 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-01">2022-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 393 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -134,14 +134,31 @@
 <p>说明：配置 PagerMaid-Pyro 过程中使用的命令，都是在宿主机上执行。不需要进入容器(Container)内的 shell。</p>
 <p>在宿主机，使用 vim 编辑配置文件 config.yml 中的 2 个值 <strong>(api_id 和 api_hash)</strong> 以后，
 即可使用 <code>python3 -m pagermaid</code> 尝试跑起来了。</p>
-<pre tabindex="0"><code>docker exec -it pgmpyro nano config.yml
-docker exec -it pgmpyro python3 -m pagermaid
-</code></pre><p>根据提示填写信息后，会提示你在 TG 客户端内输入 ,help 指令，根据提示输入后，如果能看到消息被编辑，Ctrl+C 结束掉即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro nano config.yml
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro python3 -m pagermaid
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>根据提示填写信息后，会提示你在 TG 客户端内输入 ,help 指令，根据提示输入后，如果能看到消息被编辑，Ctrl+C 结束掉即可。</p>
 <p>进程守护：此步骤可以方便 pagermaid_pyro 的自动运行，您无需在 pagermaid-pyro 意外退出后重新登录主机进行操作。</p>
-<pre tabindex="0"><code>docker exec -it pgmpyro systemctl daemon-reload
-docker exec -it pgmpyro systemctl start pagermaid_pyro.service
-docker exec -it pgmpyro systemctl enable pagermaid_pyro.service
-</code></pre><p>若 PagerMaid-Pyro 在长期运行后遇到未知原因而无法正常运行的情况，需要手动重启。命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl daemon-reload
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl start pagermaid_pyro.service
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl <span class="nb">enable</span> pagermaid_pyro.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>若 PagerMaid-Pyro 在长期运行后遇到未知原因而无法正常运行的情况，需要手动重启。命令如下：</p>
 <p><code>docker exec -it pgmpyro systemctl restart pagermaid_pyro.service</code></p>
 <p><strong>请注意保护好您已登录的 pagermaid.session,此文件可以进行账号所有操作，请不要分享给他人使用。</strong></p>
 <hr>

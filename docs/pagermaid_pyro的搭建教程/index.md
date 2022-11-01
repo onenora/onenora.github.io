@@ -18,7 +18,7 @@
 在宿主机，使用 vim 编辑配置文件 config.yml 中的 2 个值 **(api_id 和 api_hash)** 以后，
 即可使用 `python3 -m pagermaid` 尝试跑起来了。
 
-```
+```bash
 docker exec -it pgmpyro nano config.yml
 docker exec -it pgmpyro python3 -m pagermaid
 ```
@@ -27,7 +27,7 @@ docker exec -it pgmpyro python3 -m pagermaid
 
 进程守护：此步骤可以方便 pagermaid_pyro 的自动运行，您无需在 pagermaid-pyro 意外退出后重新登录主机进行操作。
 
-```
+```bash
 docker exec -it pgmpyro systemctl daemon-reload
 docker exec -it pgmpyro systemctl start pagermaid_pyro.service
 docker exec -it pgmpyro systemctl enable pagermaid_pyro.service
