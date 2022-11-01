@@ -6,18 +6,18 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Altria Saber)</managingEditor>
             <webMaster>altriabot@gmail.com (Altria Saber)</webMaster><copyright>Copyright © 2022, Altria, all rights reserved.</copyright><lastBuildDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</lastBuildDate><atom:link href="https://i.oneblog.eu.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>PagerMaid_Pyro的搭建教程</title>
-    <link>https://i.oneblog.eu.org/pagermaid_pyro%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+    <link>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</link>
     <pubDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</pubDate>
     <author>Altria Saber</author>
-    <guid>https://i.oneblog.eu.org/pagermaid_pyro%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[前提 宿主机已经安装 docker(未安装请使用官方脚本 curl -fsSL https://get.docker.com | bash -s docker ) 无需配置更多环境依赖,打开即用～ 仅支持 AMD 使用方法 docker run -itd --name pgmpyro --privileged=true --restart=always altriabot/pagermaid_pyro:2.0 配置 PagerMaid-Pyro 说]]></description>
+    <guid>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</guid>
+    <description><![CDATA[前提 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基于此docker image仅264MB: 名称 版本]]></description>
 </item>
 <item>
     <title>SSH“保活”措施</title>
-    <link>https://i.oneblog.eu.org/ssh%E4%BF%9D%E6%B4%BB%E6%8E%AA%E6%96%BD/</link>
+    <link>https://i.oneblog.eu.org/ssh-keep-alive.html/</link>
     <pubDate>Thu, 27 Oct 2022 17:56:31 &#43;0800</pubDate>
     <author>Altria Saber</author>
-    <guid>https://i.oneblog.eu.org/ssh%E4%BF%9D%E6%B4%BB%E6%8E%AA%E6%96%BD/</guid>
+    <guid>https://i.oneblog.eu.org/ssh-keep-alive.html/</guid>
     <description><![CDATA[IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过]]></description>
 </item>
 </channel>
