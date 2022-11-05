@@ -6,6 +6,7 @@
 - 未安装请使用官方脚本安装 `curl -fsSL https://get.docker.com | bash -s docker`
 - 无需配置更多环境依赖,打开即用～
 - 基于此docker image仅264MB:
+
 | 名称 | 版本 | 说明 |
 | :----: |:----: |:----: |
 | altriabot/pagermaid_pyro | 2.0 |仅支持 AMD64 |
@@ -14,9 +15,9 @@
 
 `docker run -itd --name pgmpyro --privileged=true --restart=always altriabot/pagermaid_pyro:2.0`
 
-## 配置 PagerMaid-Pyro
+## 配置 PagerMaid_Pyro
 
-说明：配置 PagerMaid-Pyro 过程中使用的命令，都是在宿主机上执行。不需要进入容器(Container)内的 shell。
+说明：配置 PagerMaid_Pyro 过程中使用的命令，都是在宿主机上执行。不需要进入容器(Container)内的 shell。
 
 在宿主机，使用 nano 编辑配置文件 config.yml 中的 2 个值 **(api_id 和 api_hash)** 以后，
 即可使用 `python3 -m pagermaid` 尝试跑起来了。
