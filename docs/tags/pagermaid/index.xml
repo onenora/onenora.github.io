@@ -10,7 +10,7 @@
     <pubDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</pubDate>
     <author>Altria Saber</author>
     <guid>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</guid>
-    <description><![CDATA[前提 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基于此docker image仅264MB: 名称 版本]]></description>
+    <description><![CDATA[前提 注意⚠️,这是手动教程，要自动的可以关闭本教程了 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基]]></description>
 </item>
 </channel>
 </rss>
