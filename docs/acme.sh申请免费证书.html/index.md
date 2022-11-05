@@ -23,11 +23,15 @@ acme.sh --upgrade --auto-upgrade
 
 2.证书申请
 
-- 2.1 _80 端口未占用_：`acme.sh --issue -d www.yourdomain.com --standalone --keylength ec-256 --debug`
+- 2.1 _80 端口未占用_：
+  
+`acme.sh --issue -d www.yourdomain.com --standalone --keylength ec-256 --debug`
 
-- 2.2 _80 端口占用_，使用 DNS 申请：`acme.sh --issue --dns dns_cf -d www.yourdomain.com --keylength ec-256 --debug`
+- 2.2 _80 端口占用_，使用 DNS 申请：
 
-```
+`acme.sh --issue --dns dns_cf -d www.yourdomain.com --keylength ec-256 --debug`
+
+```conf
 # 不推荐使用全局 API 密钥（最小权限原则）
 # 使用新建一个cloudflare api 令牌:
 nano ~/.acme.sh/account.conf
