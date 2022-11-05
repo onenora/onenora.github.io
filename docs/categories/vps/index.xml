@@ -6,11 +6,11 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Altria Saber)</managingEditor>
             <webMaster>altriabot@gmail.com (Altria Saber)</webMaster><copyright>Copyright © 2022, Altria, all rights reserved.</copyright><lastBuildDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</lastBuildDate><atom:link href="https://i.oneblog.eu.org/categories/vps/" rel="self" type="application/rss+xml" /><item>
     <title>Acme.sh申请免费证书</title>
-    <link>https://i.oneblog.eu.org/acme.sh%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E8%AF%81%E4%B9%A6.html/</link>
+    <link>https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/</link>
     <pubDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</pubDate>
     <author>Altria Saber</author>
-    <guid>https://i.oneblog.eu.org/acme.sh%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E8%AF%81%E4%B9%A6.html/</guid>
-    <description><![CDATA[安装 acme.sh 运行安装脚本（不要求 Root 环境） 1 wget -O - https://get.acme.sh | sh 安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/ 开启acme.sh]]></description>
+    <guid>https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/</guid>
+    <description><![CDATA[安装 acme.sh 运行安装脚本（不要求 Root 环境） 1 wget -O - https://get.acme.sh | sh 安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/ 然后重新载入一下 .bashrc]]></description>
 </item>
 <item>
     <title>SSH“保活”措施</title>

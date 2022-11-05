@@ -4,34 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>PagerMaid_Pyro的搭建教程 - Wellcome to One Blog</title><meta name="Description" content="山有木兮木有枝 心有尔兮亦相思"><meta property="og:title" content="PagerMaid_Pyro的搭建教程" />
-<meta property="og:description" content="前提 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基于此docker image仅264MB: 名称 版本" />
+        <title>Acme.sh申请免费证书 - Wellcome to One Blog</title><meta name="Description" content="山有木兮木有枝 心有尔兮亦相思"><meta property="og:title" content="Acme.sh申请免费证书" />
+<meta property="og:description" content="安装 acme.sh 运行安装脚本（不要求 Root 环境） 1 wget -O - https://get.acme.sh | sh 安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/ 然后重新载入一下 .bashrc" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" /><meta property="og:image" content="https://i.oneblog.eu.org/images/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-01T12:16:29+08:00" />
-<meta property="article:modified_time" content="2022-11-01T20:38:29+08:00" /><meta property="og:site_name" content="One Blog" />
+<meta property="og:url" content="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" /><meta property="og:image" content="https://i.oneblog.eu.org/images/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-05T14:12:34+08:00" />
+<meta property="article:modified_time" content="2022-11-05T14:12:34+08:00" /><meta property="og:site_name" content="One Blog" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.oneblog.eu.org/images/logo.png"/>
 
-<meta name="twitter:title" content="PagerMaid_Pyro的搭建教程"/>
-<meta name="twitter:description" content="前提 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基于此docker image仅264MB: 名称 版本"/>
+<meta name="twitter:title" content="Acme.sh申请免费证书"/>
+<meta name="twitter:description" content="安装 acme.sh 运行安装脚本（不要求 Root 环境） 1 wget -O - https://get.acme.sh | sh 安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/ 然后重新载入一下 .bashrc"/>
 <meta name="application-name" content="One Blog">
 <meta name="apple-mobile-web-app-title" content="One Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" /><link rel="prev" href="https://i.oneblog.eu.org/ssh-keep-alive.html/" /><link rel="next" href="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" /><link rel="prev" href="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "PagerMaid_Pyro的搭建教程",
+        "headline": "Acme.sh申请免费证书",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/i.oneblog.eu.org\/bulid_pagermaid_pyro.html\/"
-        },"genre": "posts","keywords": "PagerMaid","wordcount":  440 ,
-        "url": "https:\/\/i.oneblog.eu.org\/bulid_pagermaid_pyro.html\/","datePublished": "2022-11-01T12:16:29+08:00","dateModified": "2022-11-01T20:38:29+08:00","license": "Copyright © 2022, Altria, all rights reserved.","publisher": {
+            "@id": "https:\/\/i.oneblog.eu.org\/acme.sh-apply-for-a-free-certificate.html\/"
+        },"genre": "posts","keywords": "证书","wordcount":  357 ,
+        "url": "https:\/\/i.oneblog.eu.org\/acme.sh-apply-for-a-free-certificate.html\/","datePublished": "2022-11-05T14:12:34+08:00","dateModified": "2022-11-05T14:12:34+08:00","license": "Copyright © 2022, Altria, all rights reserved.","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,9 +106,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PagerMaid_Pyro的搭建教程</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Altria Saber</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/telegram/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Telegram</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-01">2022-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 440 字&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Acme.sh申请免费证书</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Altria Saber</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/vps/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VPS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-05">2022-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 357 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -117,56 +117,80 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#前提">前提</a></li>
-    <li><a href="#使用方法">使用方法</a></li>
-    <li><a href="#配置-pagermaid_pyro">配置 PagerMaid_Pyro</a></li>
-    <li><a href="#扩展">扩展</a></li>
+    <li><a href="#安装-acmesh">安装 acme.sh</a></li>
+    <li><a href="#证书申请">证书申请</a></li>
+    <li><a href="#证书安装">证书安装</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="前提">前提</h2>
+            </div><div class="content" id="content"><h2 id="安装-acmesh">安装 acme.sh</h2>
 <ul>
-<li>宿主机已经安装 docker</li>
-<li>未安装请使用官方脚本安装 <code>curl -fsSL https://get.docker.com | bash -s docker</code></li>
-<li>无需配置更多环境依赖,打开即用～</li>
-<li>基于此docker image仅264MB:</li>
+<li>运行安装脚本（不要求 Root 环境）</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">altriabot/pagermaid_pyro</td>
-<td style="text-align:center">2.0</td>
-<td style="text-align:center">仅支持 AMD64</td>
-</tr>
-</tbody>
-</table>
-<h2 id="使用方法">使用方法</h2>
-<p><code>docker run -itd --name pgmpyro --privileged=true --restart=always altriabot/pagermaid_pyro:2.0</code></p>
-<h2 id="配置-pagermaid_pyro">配置 PagerMaid_Pyro</h2>
-<p>说明：配置 PagerMaid_Pyro 过程中使用的命令，都是在宿主机上执行。不需要进入容器(Container)内的 shell。</p>
-<p>在宿主机，使用 nano 编辑配置文件 config.yml 中的 2 个值 <strong>(api_id 和 api_hash)</strong> 以后，
-即可使用 <code>python3 -m pagermaid</code> 尝试跑起来了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -O -  https://get.acme.sh <span class="p">|</span> sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/</p>
+<ul>
+<li>然后重新载入一下 .bashrc</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>开启<code>acme.sh</code> 的自动升级</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">acme.sh --upgrade --auto-upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="证书申请">证书申请</h2>
+<p>1.修改默认 CA 证书供应商<code>acme.sh --set-default-ca --server letsencrypt</code></p>
+<p>2.证书申请</p>
+<ul>
+<li>2.1 <em>80 端口未占用</em>：</li>
+</ul>
+<p><code>acme.sh --issue -d www.yourdomain.com --standalone --keylength ec-256 --debug</code></p>
+<ul>
+<li>2.2 <em>80 端口占用</em>，使用 DNS 申请：</li>
+</ul>
+<p><code>acme.sh --issue --dns dns_cf -d www.yourdomain.com --keylength ec-256 --debug</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro nano config.yml
-</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro python3 -m pagermaid
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 不推荐使用全局 API 密钥（最小权限原则）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用新建一个cloudflare api 令牌:</span>
+</span></span><span class="line"><span class="cl">nano ~/.acme.sh/account.conf
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CF_Token</span><span class="o">=</span><span class="s2">&#34;sdfsdfsdfljlbjkljlkjsdfoiwje&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CF_Account_ID</span><span class="o">=</span><span class="s2">&#34;xxxxxxxxxxxxx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CF_Zone_ID</span><span class="o">=</span><span class="s2">&#34;xxxxxxxxxxxxx&#34;</span>   //此项非必须
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>根据提示填写信息后，会提示你在 TG 客户端内输入 ,help 指令，根据提示输入后，如果能看到消息被编辑，Ctrl+C 结束掉即可。</p>
-<ul>
-<li>进程守护：一定要依次输入这三条代码</li>
-<li>此步骤可以方便 pagermaid_pyro 的自动运行，而无需在 pagermaid_pyro 意外退出后重新登录主机进行操作。</li>
-</ul>
+</div><p>详见：<a href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi" target="_blank" rel="noopener noreffer ">acme.sh wiki dnsapi</a></p>
+<blockquote>
+<p>ECC 证书的主要优势在于它的 Keysize 更小，意味着同等大小下安全性的提升和加密解密速度的加快。如 ECC-256bit 的强度大约相当于 RSA-3072bit 。</p>
+</blockquote>
+<h2 id="证书安装">证书安装</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -174,44 +198,36 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl daemon-reload
-</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl start pagermaid_pyro.service
-</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it pgmpyro systemctl <span class="nb">enable</span> pagermaid_pyro.service
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> acme.sh --install-cert -d www.yourdomain.com <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--fullchain-file ~/docker/nginx/ssl/yourdomain.crt  <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--key-file  ~/docker/nginx/ssl/yourdomain.key  --ecc
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>若 PagerMaid-Pyro 在长期运行后遇到未知原因而无法正常运行的情况，需要手动重启。命令如下：</p>
-<p><code>docker exec -it pgmpyro systemctl restart pagermaid_pyro.service</code></p>
-<p><strong>请注意保护好您已登录的 pagermaid.session,此文件可以进行账号所有操作，请不要分享给他人使用。</strong></p>
-<h2 id="扩展">扩展</h2>
-<ul>
-<li><a href="https://xtaolabs.com/" target="_blank" rel="noopener noreffer ">官方教程</a></li>
-<li><a href="https://github.com/TeamPGM/PagerMaid-Pyro" target="_blank" rel="noopener noreffer ">PagerMaid-Pyro</a> <em>新的项目</em></li>
-</ul>
+</div><p>将~/docker/nginx/ssl/改成你想要的路径即可，建议证书以.crt 结尾，密钥以.key 结尾</p>
 <hr>
             <center>- 全文完 -</center>
         </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-11-01</span>
+                <span>更新于 2022-11-05</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程" data-via="Adams_Strange" data-hashtags="PagerMaid"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-hashtag="PagerMaid"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" data-title="PagerMaid_Pyro的搭建教程" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书" data-via="Adams_Strange" data-hashtags="证书"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-hashtag="证书"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" data-title="Acme.sh申请免费证书" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/pagermaid/">PagerMaid</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AF%81%E4%B9%A6/">证书</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ssh-keep-alive.html/" class="prev" rel="prev" title="SSH“保活”措施"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SSH“保活”措施</a>
-            <a href="/acme.sh-apply-for-a-free-certificate.html/" class="next" rel="next" title="Acme.sh申请免费证书">Acme.sh申请免费证书<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/bulid_pagermaid_pyro.html/" class="prev" rel="prev" title="PagerMaid_Pyro的搭建教程"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>PagerMaid_Pyro的搭建教程</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
