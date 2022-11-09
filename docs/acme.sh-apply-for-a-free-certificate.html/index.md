@@ -36,6 +36,14 @@ acme.sh --upgrade --auto-upgrade
 
 `acme.sh --issue --dns dns_cf -d www.yourdomain.com --keylength ec-256 --debug`
 
+`--debug`是可选参数,输出的信息更详细，用来排除错误。
+
+如下，申请成功：
+
+![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/SCR-20221109-h5n.png)
+
+配置文件位置` ~/.acme.sh/account.conf`可以用Vim或者nano 打开编辑
+
 ```bash
 # 不推荐使用全局 API 密钥（最小权限原则）
 # 使用新建一个cloudflare api 令牌:
@@ -56,4 +64,33 @@ export CF_Zone_ID="xxxxxxxxxxxxx"   //此项非必须
 --key-file  ~/docker/nginx/ssl/yourdomain.key  --ecc
 ```
 
-将~/docker/nginx/ssl/改成你想要的路径即可，建议证书以.crt 结尾，密钥以.key 结尾
+将~/docker/nginx/ssl/改成你想要安装到的路径即可，建议证书以.crt 结尾，密钥以.key 结尾。
+
+## 为电报设置通知
+
+一旦您同时拥有TG Bot API令牌和您希望机器人设置通知的聊天ID，
+
+请在`~/.acme.sh/account.conf` 设置以下两个变量供通知钩子脚本使用：
+
+```bash
+export TELEGRAM_BOT_APITOKEN="..."   # Token returned by @BotFather during bot creation above.
+export TELEGRAM_BOT_CHATID="..."     # Chat ID fetched above.
+```
+
+然后设置通知钩子：`acme.sh --set-notify --notify-hook telegram`
+
+如下电报机器人通知设置成功：
+
+![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/20221109195751.png)
+
+默认acme.sh每天自动检测证书是否过期，过期会自动续约，并安装到上一次安装证书的位置。
+
+没过期，Renew Skipped。过期，续约通知 Success!!!
+
+![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/20221109200444.png)
+
+详见：[acme.sh wiki notify](https://github.com/acmesh-official/acme.sh/wiki/notify)
+
+## 其它
+
+**想到再写吧！！**
