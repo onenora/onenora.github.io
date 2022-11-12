@@ -31,13 +31,13 @@ docker exec -it pgmpyro nano config.yml
 
 提示`File Name to Write:config.yml` 按回车**Enter**确认
 
-![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/202211051812417.png)
+![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/202211051812417.png)
 
 `Ctrl+X`，退出编辑文本
 
 - tips：如果直接Ctrl+X，会提示`Save modified buffer?`按 **Y** 确认后再回车即可
 
-![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/202211051812700.png)
+![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/202211051812700.png)
 
 ### 2. 登陆TG
 ```shell
