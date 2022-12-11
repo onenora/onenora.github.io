@@ -31,20 +31,20 @@ docker exec -it pgmpyro nano config.yml
 
 提示`File Name to Write:config.yml` 按回车**Enter**确认
 
-![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/202211051812417.png)
+![](https://cdn.jsdelivr.net/gh/onenora/picgo@main/img/202211051812417.png)
 
 `Ctrl+X`，退出编辑文本
 
 - tips：如果直接Ctrl+X，会提示`Save modified buffer?`按 **Y** 确认后再回车即可
 
-![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/202211051812700.png)
+![](https://cdn.jsdelivr.net/gh/onenora/picgo@main/img/202211051812700.png)
 
 ### 2. 登陆TG
 ```shell
 docker exec -it pgmpyro python3 -m pagermaid
 ```
 根据提示填写信息后，会提示你在 TG 客户端内输入 ,help 指令，根据提示输入后，如果能看到消息被编辑，
-![](https://raw.githubusercontent.com/Altriabot/picgo/main/img/202211051804964.png)
+![](https://raw.githubusercontent.com/onenora/picgo/main/img/202211051804964.png)
 Ctrl+C 结束掉即可。
 
 ### 3. 进程守护

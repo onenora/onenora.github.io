@@ -3,14 +3,14 @@
         <title>Wellcome to One Blog</title>
         <link>https://i.oneblog.eu.org/</link>
         <description>山有木兮木有枝 心有尔兮亦相思</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Altria Saber)</managingEditor>
-            <webMaster>altriabot@gmail.com (Altria Saber)</webMaster><copyright>Copyright © 2022, Altria, all rights reserved.</copyright><lastBuildDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Nora)</managingEditor>
+            <webMaster>altriabot@gmail.com (Nora)</webMaster><copyright>Copyright © 2022, Nora, all rights reserved.</copyright><lastBuildDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</lastBuildDate>
             <atom:link href="https://i.oneblog.eu.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Acme.sh申请免费证书</title>
     <link>https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/</link>
     <pubDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</pubDate>
-    <author>Altria Saber</author>
+    <author>Nora</author>
     <guid>https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/</guid>
     <description><![CDATA[安装 acme.sh 运行安装脚本（不要求 Root 环境） 1 wget -O - https://get.acme.sh | sh 安装过程不会污染已有的系统任何功能和文件, 所有的修改都限制在安装目录中: ~/.acme.sh/ 然后重新载入一下 .bashrc]]></description>
 </item>
@@ -18,7 +18,7 @@
     <title>PagerMaid_Pyro的搭建教程</title>
     <link>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</link>
     <pubDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</pubDate>
-    <author>Altria Saber</author>
+    <author>Nora</author>
     <guid>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</guid>
     <description><![CDATA[前提 注意⚠️,这是手动教程，要自动的可以关闭本教程了 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基]]></description>
 </item>
@@ -26,7 +26,7 @@
     <title>SSH“保活”措施</title>
     <link>https://i.oneblog.eu.org/ssh-keep-alive.html/</link>
     <pubDate>Thu, 27 Oct 2022 17:56:31 &#43;0800</pubDate>
-    <author>Altria Saber</author>
+    <author>Nora</author>
     <guid>https://i.oneblog.eu.org/ssh-keep-alive.html/</guid>
     <description><![CDATA[IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过]]></description>
 </item>

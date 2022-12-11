@@ -40,7 +40,7 @@ acme.sh --upgrade --auto-upgrade
 
 如下，申请成功：
 
-![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/SCR-20221109-h5n.png)
+![](https://cdn.jsdelivr.net/gh/onenora/picgo@main/img/SCR-20221109-h5n.png)
 
 配置文件位置` ~/.acme.sh/account.conf`可以用Vim或者nano 打开编辑
 
@@ -81,13 +81,13 @@ export TELEGRAM_BOT_CHATID="..."     # Chat ID fetched above.
 
 如下电报机器人通知设置成功：
 
-![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/20221109195751.png)
+![](https://cdn.jsdelivr.net/gh/onenora/picgo@main/img/20221109195751.png)
 
 默认acme.sh每天自动检测证书是否过期，过期会自动续约，并安装到上一次安装证书的位置。
 
 没过期，Renew Skipped。过期，续约通知 Success!!!
 
-![](https://cdn.jsdelivr.net/gh/Altriabot/picgo@main/img/20221109200444.png)
+![](https://cdn.jsdelivr.net/gh/onenora/picgo@main/img/20221109200444.png)
 
 详见：[acme.sh wiki notify](https://github.com/acmesh-official/acme.sh/wiki/notify)
 

@@ -3,12 +3,12 @@
         <title>PagerMaid - 标签 - Wellcome to One Blog</title>
         <link>https://i.oneblog.eu.org/tags/pagermaid/</link>
         <description>PagerMaid - 标签 - Wellcome to One Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Altria Saber)</managingEditor>
-            <webMaster>altriabot@gmail.com (Altria Saber)</webMaster><copyright>Copyright © 2022, Altria, all rights reserved.</copyright><lastBuildDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</lastBuildDate><atom:link href="https://i.oneblog.eu.org/tags/pagermaid/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Nora)</managingEditor>
+            <webMaster>altriabot@gmail.com (Nora)</webMaster><copyright>Copyright © 2022, Nora, all rights reserved.</copyright><lastBuildDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</lastBuildDate><atom:link href="https://i.oneblog.eu.org/tags/pagermaid/" rel="self" type="application/rss+xml" /><item>
     <title>PagerMaid_Pyro的搭建教程</title>
     <link>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</link>
     <pubDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</pubDate>
-    <author>Altria Saber</author>
+    <author>Nora</author>
     <guid>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</guid>
     <description><![CDATA[前提 注意⚠️,这是手动教程，要自动的可以关闭本教程了 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基]]></description>
 </item>
