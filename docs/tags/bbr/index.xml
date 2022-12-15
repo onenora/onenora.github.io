@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>BBR - 标签 - Wellcome to One Blog</title>
+        <link>https://i.oneblog.eu.org/tags/bbr/</link>
+        <description>BBR - 标签 - Wellcome to One Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Nora)</managingEditor>
+            <webMaster>altriabot@gmail.com (Nora)</webMaster><copyright>Copyright © 2022, Nora, all rights reserved.</copyright><lastBuildDate>Mon, 12 Dec 2022 21:22:25 &#43;0800</lastBuildDate><atom:link href="https://i.oneblog.eu.org/tags/bbr/" rel="self" type="application/rss+xml" /><item>
+    <title>开启bbr</title>
+    <link>https://i.oneblog.eu.org/open_bbr.html/</link>
+    <pubDate>Mon, 12 Dec 2022 21:22:25 &#43;0800</pubDate>
+    <author>Nora</author>
+    <guid>https://i.oneblog.eu.org/open_bbr.html/</guid>
+    <description><![CDATA[服务器优化之一：开启 BBR 1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神]]></description>
+</item>
+</channel>
+</rss>

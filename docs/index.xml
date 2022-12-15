@@ -4,9 +4,25 @@
         <link>https://i.oneblog.eu.org/</link>
         <description>山有木兮木有枝 心有尔兮亦相思</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>altriabot@gmail.com (Nora)</managingEditor>
-            <webMaster>altriabot@gmail.com (Nora)</webMaster><copyright>Copyright © 2022, Nora, all rights reserved.</copyright><lastBuildDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</lastBuildDate>
+            <webMaster>altriabot@gmail.com (Nora)</webMaster><copyright>Copyright © 2022, Nora, all rights reserved.</copyright><lastBuildDate>Mon, 12 Dec 2022 21:23:34 &#43;0800</lastBuildDate>
             <atom:link href="https://i.oneblog.eu.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Docker安装trojan-go</title>
+    <link>https://i.oneblog.eu.org/trojan-go.html/</link>
+    <pubDate>Mon, 12 Dec 2022 21:23:34 &#43;0800</pubDate>
+    <author>Nora</author>
+    <guid>https://i.oneblog.eu.org/trojan-go.html/</guid>
+    <description><![CDATA[1.安装Docker 环境 1 curl -fsSL https://get.docker.com | bash -s docker 2.在当前目录创建trojan-go文件夹 mkdir -p trojan-go 3.创建并映射trojan-go的配置文件confi]]></description>
+</item>
+<item>
+    <title>开启bbr</title>
+    <link>https://i.oneblog.eu.org/open_bbr.html/</link>
+    <pubDate>Mon, 12 Dec 2022 21:22:25 &#43;0800</pubDate>
+    <author>Nora</author>
+    <guid>https://i.oneblog.eu.org/open_bbr.html/</guid>
+    <description><![CDATA[服务器优化之一：开启 BBR 1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神]]></description>
+</item>
+<item>
     <title>Acme.sh申请免费证书</title>
     <link>https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/</link>
     <pubDate>Sat, 05 Nov 2022 14:12:34 &#43;0800</pubDate>

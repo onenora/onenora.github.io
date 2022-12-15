@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>开启bbr - Wellcome to One Blog</title><meta name="Description" content="山有木兮木有枝 心有尔兮亦相思"><meta property="og:title" content="开启bbr" />
+<meta property="og:description" content="服务器优化之一：开启 BBR 1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://i.oneblog.eu.org/open_bbr.html/" /><meta property="og:image" content="https://i.oneblog.eu.org/images/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-12T21:22:25+08:00" />
+<meta property="article:modified_time" content="2022-12-12T21:22:25+08:00" /><meta property="og:site_name" content="One Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.oneblog.eu.org/images/logo.png"/>
+
+<meta name="twitter:title" content="开启bbr"/>
+<meta name="twitter:description" content="服务器优化之一：开启 BBR 1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神"/>
+<meta name="application-name" content="One Blog">
+<meta name="apple-mobile-web-app-title" content="One Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://i.oneblog.eu.org/open_bbr.html/" /><link rel="prev" href="https://i.oneblog.eu.org/acme.sh-apply-for-a-free-certificate.html/" /><link rel="next" href="https://i.oneblog.eu.org/trojan-go.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "开启bbr",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/i.oneblog.eu.org\/open_bbr.html\/"
+        },"genre": "posts","keywords": "BBR","wordcount":  1973 ,
+        "url": "https:\/\/i.oneblog.eu.org\/open_bbr.html\/","datePublished": "2022-12-12T21:22:25+08:00","dateModified": "2022-12-12T21:22:25+08:00","license": "Copyright © 2022, Nora, all rights reserved.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Nora"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Wellcome to One Blog"><span class="header-title-pre"><i class='fas fa-blog'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Home"><i class='fas fa-home'></i> 首页 
+                        </a><a class="menu-item" href="/posts/" title="技术分享Blog"><i class='fas fa-folder-open'></i> 文章 
+                        </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a><a class="menu-item" href="/categories/" title="分类"><i class='fa-solid fa-table-list'></i> 分类 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Wellcome to One Blog"><span class="header-title-pre"><i class='fas fa-blog'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="Home"><i class='fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="技术分享Blog"><i class='fas fa-folder-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title="分类"><i class='fa-solid fa-table-list'></i>分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">开启bbr</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Nora</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/vps/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VPS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-12">2022-12-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1973 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-传说中的-bbr">1. 传说中的 BBR</a></li>
+    <li><a href="#2-实际的-bbr">2. 实际的 BBR</a></li>
+    <li><a href="#3-bbrplus-bbr2-魔改-bbr-和其他各种听起来就酷炫的版本是不是更好">3. bbrplus, bbr2, 魔改 bbr 和其他各种听起来就酷炫的版本是不是更好？</a></li>
+    <li><a href="#4-fq-fq_codel-fq_pie-cake-和其他算法哪个好">4. fq, fq_codel, fq_pie, cake 和其他算法哪个好？</a></li>
+    <li><a href="#5-锐速finalspeedlotserver-和其他加速工具">5. 锐速、Finalspeed、LotServer 和其他“加速工具”</a></li>
+    <li><a href="#6-啰嗦了这么多">6. 啰嗦了这么多</a>
+      <ul>
+        <li><a href="#61-给-debian-10-添加官方-backports-源获取更新的软件库">6.1 给 Debian 10 添加官方 backports 源，获取更新的软件库</a></li>
+        <li><a href="#62-然后把下面这一条加在最后并保存退出">6.2 然后把下面这一条加在最后，并保存退出。</a></li>
+        <li><a href="#63-刷新软件库并查询">6.3 刷新软件库并查询</a></li>
+        <li><a href="#64-修改-kernel-参数配置文件-sysctlconf-并指定开启-bbr">6.4. 修改 kernel 参数配置文件 sysctl.conf 并指定开启 BBR</a></li>
+        <li><a href="#65-把下面的内容添加进去">6.5 把下面的内容添加进去</a></li>
+        <li><a href="#66-重启-vps使内核更新和-bbr-设置都生效">6.6 重启 VPS、使内核更新和 BBR 设置都生效</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-确认-bbr-开启">8. 确认 BBR 开启</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="服务器优化之一开启-bbr">服务器优化之一：开启 BBR</h1>
+<h2 id="1-传说中的-bbr">1. 传说中的 BBR</h2>
+<p>我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神乎其神。更有 bbrplus, bbr2, 魔改 bbr 等一大堆衍生品。仿佛神油一般，用了就能野鸡线路变专线。</p>
+<p>那么，这东西究竟是什么？它有没有用？又该用哪一个版本呢？</p>
+<h2 id="2-实际的-bbr">2. 实际的 BBR</h2>
+<p><strong>BBR</strong> = <strong>B</strong>ottleneck <strong>B</strong>andwidth and <strong>R</strong>ound-trip propagation time，是一种 TCP 的<strong>拥塞控制算法</strong>。简单粗暴的理解就是<strong>数据流量的交通管理</strong> ：当公路不再塞车的时候，每辆车自然就能保持较快的车速了。</p>
+<p>那么它有没有用呢？一般而言，有 BBR 和 没有 BBR 会有可以感知的差别（速度、稳定性、延迟方面都会有一些改善），所以 <strong>【非常建议开启 BBR】</strong>。</p>
+<p>但开启之后，BBR 在 4.x 和 5.x 之间的差异往往比较微妙、见仁见智，造成体验差别的决定性因素仍然是线路质量。所以 <strong>【不必纠结版本、不必盲目追新、跟随你的发行版更新内核即可】</strong></p>
+<h2 id="3-bbrplus-bbr2-魔改-bbr-和其他各种听起来就酷炫的版本是不是更好">3. bbrplus, bbr2, 魔改 bbr 和其他各种听起来就酷炫的版本是不是更好？</h2>
+<p>一句话：<strong>不是！不要用这些！这些都为了吸引眼球乱起的名字！</strong></p>
+<p>BBR 的更新和发布，都是跟随 Linux 的内核（Kernel）进行的。换言之，只要你用的是比较新的内核，就自然会使用到新版 BBR。</p>
+<p>而这些名字看起来很酷炫的东西，说白了就是仍未正式发布的、尚在测试阶段的内核及其对应的 BBR 版本。这些脚本也仅仅就是通过下载预览版的内核（甚至第三方魔改内核）来率先开启而已。</p>
+<p>内核的稳定是一台服务器稳定运行的基石。<strong>【BBR 测试版带来的细微性能差异绝对不值得更换不稳定的内核。】</strong> 请选择你所在的 Linux 发行版所支持的最新内核，这样可以最大限度的保持服务器的长期稳定和兼容。</p>
+<blockquote>
+<p>注意
+所谓魔改 bbr 的【领先】是有非常强的时效性的。比如很多 bbrplus 脚本，因为几年来都没有更新，到现在还会把你的内核换成 4.19，要知道现在稳定如 Debian 已经是 5.9 的时代了，那么这个脚本放在 2018 年 1 月也许领先了一点，到 2018 年 10 月 4.19 正发布时就已经失去了意义，放在现在甚至可以说是完完全全的【降级】和【劣化】</p>
+</blockquote>
+<h2 id="4-fq-fq_codel-fq_pie-cake-和其他算法哪个好">4. fq, fq_codel, fq_pie, cake 和其他算法哪个好？</h2>
+<p>一句话：<strong>看不懂的话，请保持 fq，足够、且不会劣化你的线路</strong></p>
+<h2 id="5-锐速finalspeedlotserver-和其他加速工具">5. 锐速、Finalspeed、LotServer 和其他“加速工具”</h2>
+<p>一句话：<strong>不要用这些！把他们丢进历史的垃圾桶吧！</strong></p>
+<p>它能解决的也只有丢包率的问题。不太准确的比喻，就是本来你用一辆车送你的货，有时候车半路就坏了（丢包），用了这些以后，你直接派出 3 份一样的货，让三辆车同时送，只要有一辆没坏就能送到。马路上都是你的车，自然就能把别人挤下去。但可想而知，你挤别人的时候，别人也会来挤你，而整个机房的出口道路一共就那么宽，最终势必就变成集体大堵车了。</p>
+<blockquote>
+<p>说明
+它们的原理不是算法优化、不是提速、大多数是简单粗暴的<strong>多倍发包</strong>。对于【丢包率非常高】的差线路可能有一点作用，但【对丢包率低的好线路没有任何优化作用，反而会成倍的消耗你的流量】，进而造成服务器和你的邻居不必要的压力。</p>
+</blockquote>
+<p>如果你的线路真的丢包率奇高，真正靠谱的解决方案是【换线路】。</p>
+<h2 id="6-啰嗦了这么多">6. 啰嗦了这么多</h2>
+<blockquote>
+<p>就是因为围绕 BBR 忽悠小白的错误概念和坑人脚本实在是太多了。我希望你们现在对 BBR 有了相对清晰的理解。接下来，我们就动手安装最新的 Debian 内核并开启 BBR 吧！（真的很简单）</p>
+</blockquote>
+<h3 id="61-给-debian-10-添加官方-backports-源获取更新的软件库">6.1 给 Debian 10 添加官方 backports 源，获取更新的软件库</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/apt/sources.list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>说明
+本文以 Debian 10 为例，所以使用 /etc/apt/sources.list 仍无问题，但如果你并不是根据本文从头开始，或者使用了其他 Linux 发行版，那么建议你建立 /etc/apt/sources.list.d/ 文件夹，并在这个文件夹内建立自己的配置文件，形如 /etc/apt/sources.list.d/vpsadmin.list ，以此保证兼容性，也可避免默认文件在不可预见的情况下被覆盖而导致配置丢失。</p>
+</blockquote>
+<h3 id="62-然后把下面这一条加在最后并保存退出">6.2 然后把下面这一条加在最后，并保存退出。</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deb http://deb.debian.org/debian buster-backports main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="63-刷新软件库并查询">6.3 刷新软件库并查询</h3>
+<p>Debian 官方的最新版内核并安装。请务必安装你的 VPS 对应的版本（本文以比较常见的【amd64】为例）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt -t buster-backports install linux-image-amd64
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意
+如果你的 VPS 支持，可以尝试【云服务器专用内核】linux-image-cloud-amd64，优点就是精简、资源占用低，缺点嘛是有同学反馈不支持的系统强行安装会导致无法开机（Kernel 无法识别）。</p>
+</blockquote>
+<p>为了避免无法识别的悲剧，请确保：</p>
+<ul>
+<li>尝试前做一个系统快照，或者</li>
+<li>你有 vnc 可以救场（并且你知道怎么用）</li>
+</ul>
+<h3 id="64-修改-kernel-参数配置文件-sysctlconf-并指定开启-bbr">6.4. 修改 kernel 参数配置文件 sysctl.conf 并指定开启 BBR</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/sysctl.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>说明
+本文以 Debian 10 为例，所以使用 /etc/sysctl.conf 仍无问题，但如果你并不是跟着本文从头开始，或者使用了其他 Linux 发行版，那么建议你建立 /etc/sysctl.d/ 文件夹，并在这个文件夹内建立自己的配置文件，形如 /etc/sysctl.d/vpsadmin.conf，以此保证兼容性，因为部分发行版在 systemd 207 版本之后便不再从 /etc/sysctl.conf 读取参数。使用自定义配置文件也可避免默认文件在不可预见的情况下被覆盖而导致配置丢失。</p>
+</blockquote>
+<h3 id="65-把下面的内容添加进去">6.5 把下面的内容添加进去</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">net.core.default<span class="se">\_</span>qdisc<span class="o">=</span>fq
+</span></span><span class="line"><span class="cl">net.ipv4.tcp<span class="se">\_</span>congestion<span class="se">\_</span>control<span class="o">=</span>bbr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="66-重启-vps使内核更新和-bbr-设置都生效">6.6 重启 VPS、使内核更新和 BBR 设置都生效</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="8-确认-bbr-开启">8. 确认 BBR 开启</h2>
+<p>如果你想确认 BBR 是否正确开启，可以使用下面的命令：</p>
+<p><code>lsmod | grep bbr</code></p>
+<p>此时应该返回这样的结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tcp<span class="se">\_</span>bbr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你想确认 fq 算法是否正确开启，可以使用下面的命令：</p>
+<p><code>lsmod | grep fq</code></p>
+<p>此时应该返回这样的结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sch<span class="se">\_</span>fq
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+            <center>- 全文完 -</center>
+        </div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-12-12</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr" data-via="Adams_Strange" data-hashtags="BBR"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-hashtag="BBR"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://i.oneblog.eu.org/open_bbr.html/" data-title="开启bbr" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bbr/">BBR</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/acme.sh-apply-for-a-free-certificate.html/" class="prev" rel="prev" title="Acme.sh申请免费证书"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Acme.sh申请免费证书</a>
+            <a href="/trojan-go.html/" class="next" rel="next" title="Docker安装trojan-go">Docker安装trojan-go<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><i class="fa-solid fa-seedling"></i>山有木兮木有枝 心有尔兮亦相思</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Nora</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="sidebar_wo">
+            <div id="leimu">
+              <img src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png" alt="雷姆" 
+              onmouseover="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuB.png'" 
+              onmouseout="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png'" title="回到顶部">
+            </div>
+            <div class="sidebar_wo" id="lamu">
+              <img src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png" alt="雷姆" 
+              onmouseover="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuB.png'" 
+              onmouseout="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png'" title="回到底部">
+            </div>
+          </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"data":{"id-1":"One Blog","id-2":"One Blog"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":150}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></body>
+</html>
