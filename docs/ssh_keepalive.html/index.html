@@ -5,18 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>SSH“保活”措施 - Wellcome to One Blog</title><meta name="Description" content="山有木兮木有枝 心有尔兮亦相思"><meta property="og:title" content="SSH“保活”措施" />
-<meta property="og:description" content="IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过" />
+<meta property="og:description" content="方法1 脚本 IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://i.oneblog.eu.org/ssh-keep-alive.html/" /><meta property="og:image" content="https://i.oneblog.eu.org/images/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://i.oneblog.eu.org/ssh_keepalive.html/" /><meta property="og:image" content="https://i.oneblog.eu.org/images/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-27T17:56:31+08:00" />
-<meta property="article:modified_time" content="2022-11-01T20:38:29+08:00" /><meta property="og:site_name" content="One Blog" />
+<meta property="article:modified_time" content="2022-12-16T22:38:29+08:00" /><meta property="og:site_name" content="One Blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.oneblog.eu.org/images/logo.png"/>
 
 <meta name="twitter:title" content="SSH“保活”措施"/>
-<meta name="twitter:description" content="IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过"/>
+<meta name="twitter:description" content="方法1 脚本 IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空"/>
 <meta name="application-name" content="One Blog">
-<meta name="apple-mobile-web-app-title" content="One Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://i.oneblog.eu.org/ssh-keep-alive.html/" /><link rel="next" href="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="One Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://i.oneblog.eu.org/ssh_keepalive.html/" /><link rel="next" href="https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -26,9 +26,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/i.oneblog.eu.org\/ssh-keep-alive.html\/"
-        },"genre": "posts","keywords": "SSH","wordcount":  628 ,
-        "url": "https:\/\/i.oneblog.eu.org\/ssh-keep-alive.html\/","datePublished": "2022-10-27T17:56:31+08:00","dateModified": "2022-11-01T20:38:29+08:00","license": "Copyright © 2022, Nora, all rights reserved.","publisher": {
+            "@id": "https:\/\/i.oneblog.eu.org\/ssh_keepalive.html\/"
+        },"genre": "posts","keywords": "SSH","wordcount":  992 ,
+        "url": "https:\/\/i.oneblog.eu.org\/ssh_keepalive.html\/","datePublished": "2022-10-27T17:56:31+08:00","dateModified": "2022-12-16T22:38:29+08:00","license": "Copyright © 2022, Nora, all rights reserved.","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -105,15 +105,22 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">SSH“保活”措施</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Nora</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/vps/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VPS</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-27">2022-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 628 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-27">2022-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 992 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>  IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过，于是断开连接，其实这很不利于开发调试工作的连续性。用户往往没有服务端配置权限。此外，客户端 xshell，putty 等的”保持活动状态“功能企图解决这个问题，但不一定能生效。例如，国内使用堡垒机登录的情况越来越普遍，访问一台内部服务器实际都经过了堡垒机的转发，堡垒机判断空闲超时，从而导致 ssh”保活“措施对内部服务器不起作用。</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#方法1-脚本">方法1 脚本</a></li>
+    <li><a href="#方法2-配置客户端">方法2 配置客户端</a></li>
+    <li><a href="#方法3-配置服务器端">方法3 配置服务器端</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="方法1-脚本">方法1 脚本</h2>
+<p>  IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过，于是断开连接，其实这很不利于开发调试工作的连续性。用户往往没有服务端配置权限。此外，客户端 xshell，putty 等的”保持活动状态“功能企图解决这个问题，但不一定能生效。例如，国内使用堡垒机登录的情况越来越普遍，访问一台内部服务器实际都经过了堡垒机的转发，堡垒机判断空闲超时，从而导致 ssh”保活“措施对内部服务器不起作用。</p>
 <p>  这里给出一个通用的解决办法。ssh 登录之后，在 bash shell 环境执行。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -166,18 +173,55 @@
 <p>如果同时用了 expect 自动登录，登录之后一般不要改变终端窗口大小，因为 expect 缺省忽略 SIGWINCH 信号，窗口 size 变化导致 VIM 编辑器排版混乱。</p>
 </li>
 </ol>
+<h2 id="方法2-配置客户端">方法2 配置客户端</h2>
+<p>修改客户端中的 ssh 连接配置：
+本地ssh每隔30s向server端sshd发送keep-alive包，如果连续发送60次，server仍然无回应断开连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"> <span class="c1">#编辑.ssh目录下config文件</span>
+</span></span><span class="line"><span class="cl">cat <span class="s">&lt;&lt;EOF &gt; ~/.ssh/config 
+</span></span></span><span class="line"><span class="cl"><span class="s">host *
+</span></span></span><span class="line"><span class="cl"><span class="s">    ServerAliveInterval 30
+</span></span></span><span class="line"><span class="cl"><span class="s">    ServerAliveCountMax 60
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重启本地ssh：<code>sudo service ssh restart </code></p>
+<h2 id="方法3-配置服务器端">方法3 配置服务器端</h2>
+<p>可以在服务端配置，让server每隔30秒向client发送一个keep-alive包来保持连接：<code>sudo vim /etc/ssh/sshd_config</code>
+添加以下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ClientAliveInterval <span class="m">30</span>
+</span></span><span class="line"><span class="cl">ClientAliveCountMax <span class="m">60</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重启本地ssh：<code>sudo service ssh restart </code>
+第一行配置让server每隔30秒向client发送一个keep-alive包来保持连接；第二行配置表示如果连续发送keep-alive包数量达到60次，客户端依然没有反应，则服务端sshd断开连接。如果什么都不操作，该配置可以让连接保持30s*60，即30分钟</p>
 <hr>
             <center>- 全文完 -</center>
         </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-11-01</span>
+                <span>更新于 2022-12-16</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施" data-via="Adams_Strange" data-hashtags="SSH"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-hashtag="SSH"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://i.oneblog.eu.org/ssh-keep-alive.html/" data-title="SSH“保活”措施" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施" data-via="Adams_Strange" data-hashtags="SSH"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-hashtag="SSH"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://i.oneblog.eu.org/ssh_keepalive.html/" data-title="SSH“保活”措施" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 # PagerMaid_Pyro的搭建教程
 
+> 有幸抢到一台ARM，更新下pagermaid_pyro3.0，支持ARM架构
 
 ## 前提
 - [x] 注意:warning:,这是手动教程，要自动的可以关闭本教程了
@@ -10,11 +11,18 @@
 
 | 名称 | 版本 | 说明 |
 | :----: |:----: |:----: |
-| altriabot/pagermaid_pyro | 2.0 |仅支持 AMD64 |
+| altriabot/pagermaid_pyro | 2.0 |支持 AMD64 |
+| altriabot/pagermaid_pyro | 3.0 |支持 ARM64 |
 
 ## 使用方法
 
+AMD:
+
 `docker run -itd --name pgmpyro --privileged=true --restart=always altriabot/pagermaid_pyro:2.0`
+
+ARM:
+
+`docker run -itd --name pgmpyro --privileged=true --restart=always altriabot/pagermaid_pyro:3.0`
 
 ## 配置 PagerMaid_Pyro
 

@@ -6,7 +6,9 @@
 curl -fsSL https://get.docker.com | bash -s docker
 ```
 
-## 2.在当前目录创建trojan-go文件夹  `mkdir -p trojan-go` 
+## 2.在当前目录创建trojan-go文件夹 
+
+ `mkdir -p trojan-go` 
 
 ## 3.创建并映射trojan-go的配置文件config.json
 ```bash

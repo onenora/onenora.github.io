@@ -13,12 +13,12 @@
     <description><![CDATA[1.安装Docker 环境 1 curl -fsSL https://get.docker.com | bash -s docker 2.在当前目录创建trojan-go文件夹 mkdir -p trojan-go 3.创建并映射trojan-go的配置文件confi]]></description>
 </item>
 <item>
-    <title>开启bbr</title>
+    <title>服务器优化之一:开启BBR</title>
     <link>https://i.oneblog.eu.org/open_bbr.html/</link>
     <pubDate>Mon, 12 Dec 2022 21:22:25 &#43;0800</pubDate>
     <author>Nora</author>
     <guid>https://i.oneblog.eu.org/open_bbr.html/</guid>
-    <description><![CDATA[服务器优化之一：开启 BBR 1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神]]></description>
+    <description><![CDATA[1. 传说中的 BBR 我相信，你在搜索各种科学上网技术的时候，肯定不止一次的听过 bbr 这个东西，在各种博客添油加醋之下，让人觉得它神乎其神。更有 bbrplus, bbr2, 魔改 bbr]]></description>
 </item>
 <item>
     <title>Acme.sh申请免费证书</title>
@@ -34,15 +34,15 @@
     <pubDate>Tue, 01 Nov 2022 12:16:29 &#43;0800</pubDate>
     <author>Nora</author>
     <guid>https://i.oneblog.eu.org/bulid_pagermaid_pyro.html/</guid>
-    <description><![CDATA[前提 注意⚠️,这是手动教程，要自动的可以关闭本教程了 宿主机已经安装 docker 未安装请使用官方脚本安装 curl -fsSL https://get.docker.com | bash -s docker 无需配置更多环境依赖,打开即用～ 基]]></description>
+    <description><![CDATA[有幸抢到一台ARM，更新下pagermaid_pyro3.0，支持ARM架构 前提 注意⚠️,这是手动教程，要自动的可以关闭本教程了 宿主机已经安]]></description>
 </item>
 <item>
     <title>SSH“保活”措施</title>
-    <link>https://i.oneblog.eu.org/ssh-keep-alive.html/</link>
+    <link>https://i.oneblog.eu.org/ssh_keepalive.html/</link>
     <pubDate>Thu, 27 Oct 2022 17:56:31 &#43;0800</pubDate>
     <author>Nora</author>
-    <guid>https://i.oneblog.eu.org/ssh-keep-alive.html/</guid>
-    <description><![CDATA[IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空闲时间超过]]></description>
+    <guid>https://i.oneblog.eu.org/ssh_keepalive.html/</guid>
+    <description><![CDATA[方法1 脚本 IT 开发、运维、调试等工作经常需要 ssh 登录远程服务器。现在很多 ssh server 端设置了空闲超时自动断开。例如，人离开大于 30 分钟无操作，服务器判断空]]></description>
 </item>
 </channel>
 </rss>
